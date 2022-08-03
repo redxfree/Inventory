@@ -40,7 +40,7 @@ class Bookname(generics.ListAPIView):
     serializer_class = Bookserializer
     filter_backends = [SearchFilter]
     search_fields = ['$name']
-  
+    template_name = 'name.html'
   
 class Bookrent(generics.ListAPIView):
     queryset = Book.objects.all()

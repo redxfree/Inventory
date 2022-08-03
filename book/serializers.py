@@ -1,6 +1,3 @@
-
-from dataclasses import field, fields
-from pyexpat import model
 from rest_framework import serializers
 from .models import *
 from django.contrib.auth.models import User
@@ -67,3 +64,5 @@ class Returnserializer(serializers.ModelSerializer):
     class  Meta:
         model = Return
         fields = ['book_name','total','person_name']
+        
+        

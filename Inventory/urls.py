@@ -26,8 +26,6 @@ urlpatterns = [
     path('',include('book.urls')),
      path('api/token/',jwt_views.TokenObtainPairView.as_view(),name= 'token_obtain_pair'),
     path('api/token/refresh',jwt_views.TokenRefreshView.as_view(),name= 'token_refresh'),    
-   url('media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
-    url('static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
-
+  
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     
