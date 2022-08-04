@@ -4,7 +4,7 @@ from .views import *
 
 urlpatterns = [
         path('register/',RegisterAPI.as_view()),
-      path('',Api.as_view()),
+   #   path('',Api.as_view()),
        path('name/',Bookname.as_view()),
        path('rent/',Bookrent.as_view()),
        path('cat/',Bookcategory.as_view()),

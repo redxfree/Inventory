@@ -11,12 +11,12 @@ from django_filters.rest_framework import DjangoFilterBackend
 from django.views.generic.base import TemplateView
 
 # Create your views here.
-class Api(TemplateView):
+# class Api(TemplateView):
 
-    template_name = 'templates/base.html'
+#     template_name = 'templates/base.html'
     
-    # def post(self,request):
-    #     return render(self.request,self.template_name)
+#     # def post(self,request):
+#     #     return render(self.request,self.template_name)
     
 
 
@@ -46,7 +46,7 @@ class Bookrent(generics.ListAPIView):
     queryset = Book.objects.all()
     serializer_class = Bookserializer
     filter_backends = [SearchFilter]
-    search_fields = ['$name']
+    search_fields = ['$rent']
       
     
 class Bookcategory(generics.ListAPIView):
