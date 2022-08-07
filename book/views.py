@@ -23,7 +23,7 @@ from django.views.generic.base import TemplateView
 class RegisterAPI(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = Registerserializers
-    template_name  = 'register.html'
+
     
     def post(self,request):
         serializer = self.get_serializer(data = request.data)
@@ -40,7 +40,7 @@ class Bookname(generics.ListAPIView):
     serializer_class = Bookserializer
     filter_backends = [SearchFilter]
     search_fields = ['$name']
-    template_name = 'name.html'
+
   
 class Bookrent(generics.ListAPIView):
     queryset = Book.objects.all()
